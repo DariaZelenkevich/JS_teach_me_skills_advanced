@@ -94,35 +94,27 @@ class MyArray {
         return  removedItems;
     }
   
-    map(callback,currentVal, index, array) {
+    map(callback) {
         const newArray = new Array();
 
         for(let i = 0; i < this.array.length; i++) {
 
-            array = this.array;
-            index = i;
-            currentVal = this.array[i];
-
-            newArray.push(callback(currentVal, index, array));
+            newArray.push(callback(this.array[i], i, this.array));
         }
 
         return newArray;
     }
   
-    filter(callback,currentVal, index, array) {
+    filter(callback) {
         const newArray = new Array();
 
         for(let i = 0; i < this.array.length; i++) {
 
-            array = this.array;
-            index = i;
-            currentVal = this.array[i];
-
-            let filterRes = callback(currentVal, index, array);
+            let filterRes = callback(this.array[i], i, this.array);
             
             if(filterRes) {
 
-                newArray.push(currentVal);
+                newArray.push(this.array[i]);
             }    
         }
 
@@ -148,17 +140,27 @@ class MyArray {
         return undefined;
     }
   
-    sort(compareFunction) {}
+    sort(compareFunction) {
+
+        for(let i = 0, end = this.array.length - 1; i < end; i++) {
+            for(let j = 0, endj = end - i; j < endj; j++) {
+                if(compareFunction(this.array[i], this.array[j + 1]) > 0) {
+                    const temp = this.array[j];
+                    this.array[j] = this.array[j + 1];
+                    this.array[j + 1] = temp;
+        
+                }
+            }
+        }
+    }
   
     includes(searchElement, fromIndex) {
 
         let start = fromIndex || 0;
 
         for(let i = start; i < this.array.length; i++) {
-
-            let currentVal = this.array[i];
             
-            if(searchElement == currentVal) {
+            if(searchElement == this.array[i]) {
 
                 return true;
             }    
