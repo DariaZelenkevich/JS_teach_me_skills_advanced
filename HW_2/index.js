@@ -4,7 +4,7 @@ fetch('https://jsonplaceholder.typicode.com/todos')
         return response.json();
     })
     .then(function(data) {
-        const userList = getfibonacciRow (0, 1, data);
+        const userList = getfibonacciRow(0, 1, data);
         return userList;
     })
     .then(function(userList) {
@@ -15,12 +15,12 @@ fetch('https://jsonplaceholder.typicode.com/todos')
     }
 )
 
-function getfibonacciRow (a, b, data) {
+function getfibonacciRow(a, b, data) {
     const fibonacciRow = [];
     let i = 0;
     while( i < data.length) {
         let c = a + b;
-        if(data[i].id == c){
+        if(data[i].id === c){
             fibonacciRow.push(data[i]);
             a = b; b = c;
 
