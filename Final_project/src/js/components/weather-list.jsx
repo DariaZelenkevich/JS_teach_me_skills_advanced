@@ -82,7 +82,7 @@ class WeatherList extends Component {
 
     return ( 
       <>
-        <div>
+        <div className='container__daily-weather daily-weather'>
 
           <Button title = '<'callback={this.handleClickBack.bind(this)}/>
 
@@ -90,9 +90,9 @@ class WeatherList extends Component {
 
           <Button title = '>'callback={this.handleClickForward.bind(this)}/>
 
-          <List data = {this.state.list} />
-
         </div>
+
+        <List data = {this.state.list} />
       </>
     )
   }

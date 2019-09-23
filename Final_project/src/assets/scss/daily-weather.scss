@@ -1,0 +1,28 @@
+@import'./variables.scss';
+
+.daily-weather {
+    display: flex;
+    justify-content: space-between;
+    min-height: 250px;
+
+
+    &__button {
+        padding: 5px;
+        border: 2px solid $main-dark-color;
+        border-radius: 3px;
+        background: none;
+        color: $main-dark-color;
+        font-weight: bolder;
+        transition: 300ms ease-in-out;
+        outline: none;
+
+        &:hover {
+            background-color: $main-light-color;
+        }
+    }
+
+    &__weather-content {
+        width: 100%;
+        background-color: $main-color;
+    }    
+}

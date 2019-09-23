@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import'./container.scss';
+@import'./icon.scss';
+@import'./day.scss';
+@import'./date.scss';
+@import'./temp.scss';
+@import'./daily-weather.scss';
+@import'./weather-content.scss';
+@import'./weekly-weather.scss';

@@ -15,7 +15,7 @@ module.exports = merge(commonWebpack, {
           target: 'https://api.openweathermap.org',
           changeOrigin: true
       },
-  }
+    }
   },
   plugins: [new webpack.HotModuleReplacementPlugin()]
 });

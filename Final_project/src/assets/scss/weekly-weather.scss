@@ -1,0 +1,30 @@
+.weekly-weather {
+    
+    &__list {
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 18%;
+        padding: 10px;
+        border: 2px solid $main-dark-color;
+        border-radius: 3px;
+        background-color: $main-light-color;
+    }
+
+    &__block:first-of-type {
+        margin-bottom: 10px;
+    }
+
+    &__date {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+    
+}
