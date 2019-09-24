@@ -21,7 +21,7 @@ class Item extends Component {
             weather.map((item) => {
               let iconUrl = "http://openweathermap.org/img/w/" + item.weather_icon + ".png";
               return (
-                <div className='weather-content__block'>
+                <div className='weather-content__block' key={item.id}>
                   <div className='weather-content__data'>
                     <span className='weather-content__time'>{item.time}:00</span>
                   </div>
