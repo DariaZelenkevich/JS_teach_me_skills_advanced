@@ -30,6 +30,7 @@ function getWeekWeatherData(data) {
         currentData.temp_max = Math.floor(arr[i].main.temp_max);
         currentData.temp_min = Math.floor(arr[i].main.temp_min);
         currentData.weather_icon = arr[i].weather[0].icon;
+        currentData.id = '0' + i + j;
         today.push(currentData);
       }
 
@@ -46,6 +47,7 @@ function getWeekWeatherData(data) {
         firthData.temp_max = Math.floor(arr[i].main.temp_max);
         firthData.temp_min = Math.floor(arr[i].main.temp_min);
         firthData.weather_icon = arr[i].weather[0].icon;
+        firthData.id = '0' + i + j;
         firth.push(firthData);
 
       }
@@ -61,6 +63,7 @@ function getWeekWeatherData(data) {
         secondData.temp_max = Math.floor(arr[i].main.temp_max);
         secondData.temp_min = Math.floor(arr[i].main.temp_min);
         secondData.weather_icon = arr[i].weather[0].icon;
+        secondData.id = '0' + i + j;
         second.push(secondData);
       }
     } else if(date == getNewDate(3)) { 
@@ -75,6 +78,7 @@ function getWeekWeatherData(data) {
         thirdData.temp_max = Math.floor(arr[i].main.temp_max);
         thirdData.temp_min =  Math.floor(arr[i].main.temp_min);
         thirdData.weather_icon = arr[i].weather[0].icon;
+        thirdData.id = '0' + i + j;
         third.push(thirdData);
       }
     } else if(date == getNewDate(4)) { 
@@ -89,6 +93,7 @@ function getWeekWeatherData(data) {
         forthData.temp_max = Math.floor(arr[i].main.temp_max);
         forthData.temp_min = Math.floor(arr[i].main.temp_min);
         forthData.weather_icon = arr[i].weather[0].icon;
+        forthData.id = '0' + i + j;
         forth.push(forthData);
       }
     }    
