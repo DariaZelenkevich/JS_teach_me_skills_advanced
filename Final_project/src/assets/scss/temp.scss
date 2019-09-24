@@ -5,10 +5,10 @@
     font-weight: 700;
 
     &_max {
-        color: $font-light-color;
+        color: $font-dark-color; 
     }
 
     &_min {
-        color: $font-dark-color;
+        color: $font-light-color;
     }
 }
