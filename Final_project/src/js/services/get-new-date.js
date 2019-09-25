@@ -1,10 +1,9 @@
 function getNewDate(days) {
 
     let today = new Date();
-    let newDate = new Date();
-    newDate.setDate(today.getDate() + days); 
+    today.setDate(today.getDate() + days); 
   
-    return newDate.getDate();
+    return today.getDate();
 }
 
 export default getNewDate;

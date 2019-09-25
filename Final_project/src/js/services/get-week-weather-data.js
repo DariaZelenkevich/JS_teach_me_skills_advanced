@@ -24,7 +24,7 @@ function getWeekWeatherData(data) {
 
         const currentData = {};
 
-        currentData.date = getDateOfTheMonth(time);;
+        currentData.date = getDateOfTheMonth(time);
         currentData.day = getDayOfTheWeek(time);
         currentData.time = Math.floor(new Date(time).getHours()) + j; 
         currentData.temp_max = Math.floor(arr[i].main.temp_max);

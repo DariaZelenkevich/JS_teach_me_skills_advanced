@@ -22,10 +22,7 @@ class WeatherList extends Component {
 
     let steps = this.state.shownIndex - 1;
 
-    if (steps < 0) {
-
-      return;
-    } else {
+    if (steps >= 0) {
 
       this.setState({
         shownIndex: steps

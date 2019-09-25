@@ -2,23 +2,21 @@ function getDayOfTheWeek(milliseconds) {
 
     let day = Math.floor(new Date(milliseconds).getDay());
 
-    let stringDay = '';
-
     switch(day) {
         case 0:
-            return stringDay = 'Воскресенье';
+            return 'Воскресенье';
         case 1:
-            return stringDay = 'Понедельник';
+            return 'Понедельник';
         case 2:
-            return stringDay = 'Вторник';
+            return 'Вторник';
         case 3:
-            return stringDay = 'Среда';
+            return 'Среда';
         case 4:
-            return stringDay = 'Четверг';
+            return 'Четверг';
         case 5:
-            return stringDay = 'Пятница';
+            return 'Пятница';
         case 6:
-            return stringDay = 'Суббота';
+            return 'Суббота';
     }
 }
 

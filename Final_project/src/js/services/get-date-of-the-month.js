@@ -1,17 +1,14 @@
 function getDateOfTheMonth(milliseconds) {
 
-    let date = new Date(milliseconds).getDate();
-    let month = new Date(milliseconds).getMonth();
+    let date = new Date(milliseconds);
 
-    if(month < 10) {
+    if(date.getMonth() < 10) {
 
-        month = '0' + (month + 1);
+        return date.getDate() + '.' + '0' + (date.getMonth() + 1);
     } else {
 
-        month = '' + (month + 1); 
+        return date.getDate() + '.' + '' + (date.getMonth() + 1); 
     }
-
-    return date + '.' + month;
 }
 
 export default getDateOfTheMonth;
